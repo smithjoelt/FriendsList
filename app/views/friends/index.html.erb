@@ -3,13 +3,14 @@
 <h1>Friends</h1>
 
 <div id="friends">
-<table class="table" >
-  <% @friends.each do |<tr>friend</tr>| %>
+<table class="table ">
+  <% @friends.each do |friend| %>
     <%= render friend %>
     <p>
       <%= link_to "Show this friend", friend %>
     </p>
   <% end %>
+  </table>
 </div>
 
-<%= link_to "New friend", new_friend_path %>
+<%= link_to "New Friend", new_friend_path %>
