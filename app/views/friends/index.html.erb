@@ -5,12 +5,12 @@
 <div id="friends">
 <table class="table ">
   <% @friends.each do |friend| %>
-    <%= render friend %>
+    <%= render friend, class:"table" %>
     <p>
-      <%= link_to "Show this friend", friend %>
+      <%= link_to "Show this friend", friend, class:"btn btn-dark" %>
     </p>
   <% end %>
   </table>
 </div>
 
-<%= link_to "New Friend", new_friend_path %>
+<%= link_to "New Friend", new_friend_path, class:"btn btn-secondary" %>
