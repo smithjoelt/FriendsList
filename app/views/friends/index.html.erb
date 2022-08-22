@@ -2,15 +2,12 @@
 
 <h1>Friends</h1>
 
-<div id="friends">
-<table class="table ">
+<div id="friends" >
   <% @friends.each do |friend| %>
-    <%= render friend, class:"table" %>
+    <%= render friend %>
     <p>
-      <%= link_to "Show this friend", friend, class:"btn btn-dark" %>
+      <%= link_to "Show Friend", friend, class:"btn btn-dark" %>
     </p>
   <% end %>
-  </table>
+  <%= link_to "Add Friend", new_friend_path, class:"btn btn-secondary" %>
 </div>
-
-<%= link_to "New Friend", new_friend_path, class:"btn btn-secondary" %>
